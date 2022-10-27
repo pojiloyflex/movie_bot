@@ -24,7 +24,7 @@ async def command_start(message: types.Message):
 async def bot_message(message: types.Message):
     response = movies.movie_collection.get(message.text.lower())
     if message.text == nav.btnShowCollectionText:
-        await message.answer(movies.getMovieCollection())
+        await message.answer(movies.get_movie_collection())
     elif response is not None:
         await message.reply(response.get_text())
     else:
@@ -32,5 +32,4 @@ async def bot_message(message: types.Message):
 
 
 if __name__ == "__main__":
-    movies.getMovieCollection()
     executor.start_polling(dp, skip_updates=True)

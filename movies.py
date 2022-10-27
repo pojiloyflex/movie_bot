@@ -12,7 +12,7 @@ class Movie:
         return 'Название фильма: ' + self.name + '\n\n' + 'Описание: ' + self.description + '\n\n' + 'Ccылка: ' + self.link
 
 
-def getMovieCollection():
+def get_movie_collection():
     movie_list = list(movie_collection.keys())
     for i in range(len(movie_list)):
         movie_list[i] = '{}{}{}'.format(i + 1, ". ", movie_list[i])
