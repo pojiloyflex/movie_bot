@@ -14,7 +14,8 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def command_start(message: types.Message):
     await bot.send_message(message.from_user.id,
-                           'Здравствуйте, {0.first_name}! Введите, пожалуйста, название книги, экранизацию которой Вы хотите найти'
+                           'Здравствуйте, {0.first_name}! Введите, пожалуйста, название книги, экранизацию которой Вы '
+                           'хотите найти '
                            .format(message.from_user),
                            reply_markup=nav.mainMenu)
 
