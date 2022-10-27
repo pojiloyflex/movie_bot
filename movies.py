@@ -15,7 +15,7 @@ class Movie:
 def get_movie_collection():
     movie_list = list(movie_collection.keys())
     for i in range(len(movie_list)):
-        movie_list[i] = '{}{}{}'.format(i + 1, ". ", movie_list[i])
+        movie_list[i] = '{}{}{}'.format(i + 1, ") ", movie_list[i])
     return "\n".join(movie_list)
 
 

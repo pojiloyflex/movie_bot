@@ -1,4 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-btnShowCollectionText = 'Показать коллекцию'
+
+import strings
+
+btnShowCollectionText = strings.show_collection
 btnShowCollection = KeyboardButton(btnShowCollectionText)
 mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnShowCollection)
